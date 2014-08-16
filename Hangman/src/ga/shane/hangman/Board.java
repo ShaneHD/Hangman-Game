@@ -1,5 +1,7 @@
 package ga.shane.hangman;
 
+import java.awt.BorderLayout;
+import java.awt.Color;
 import java.awt.GridLayout;
 
 import javax.swing.JLabel;
@@ -26,6 +28,8 @@ public class Board extends JPanel {
 	public final String word;
 	/** The {@link Hanging} instance */
 	public final Hanging hanging = new Hanging();
+	/** The key pad ({@link Keyboard}) */
+	public final Keyboard keyboard = new Keyboard();
 	
 	public Board(String word) {
 //		Make the word UPPER CASE
@@ -46,10 +50,21 @@ public class Board extends JPanel {
 			chars[i] = cur;
 		}
 		
-		setLayout(new GridLayout(1, chars.length));
+		setLayout(new BorderLayout());
+		JPanel board = new JPanel();
+		board.setLayout(new GridLayout(1, chars.length));
+		board.setBackground(Color.white);
 		
 		for(JLabel label : charLabels)
-			add(label);
+			board.add(label);
+		
+		add(board, BorderLayout.SOUTH);
+		
+		
+		JPanel kboard = new JPanel();
+		kboard.setBackground(Color.white);
+		kboard.add(keyboard);
+		add(kboard);
 	}
 	
 	/**

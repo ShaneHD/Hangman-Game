@@ -11,7 +11,8 @@ public class HangmanWindow extends JFrame {
 	
 	public HangmanWindow(Board game) {
 		this.game = game;
-		setLayout(new GridLayout(2, 1));
+		GridLayout layout;
+		setLayout(layout = new GridLayout(2, 1));
 		
 		setup();
 		
@@ -23,6 +24,9 @@ public class HangmanWindow extends JFrame {
 		setLocationRelativeTo(null);				
 	}
 	
+	/**
+	 * Setup the window
+	 */
 	private void setup() {
 		setTitle(game.wordSize() + " letters");
 		getContentPane().setBackground(Color.white);

@@ -46,6 +46,7 @@ public class Board extends JPanel {
 		charLabels = new Label[word.toCharArray().length];
 		chars = new Character[charLabels.length];
 				
+//		Initialise the letters
 		for(int i = 0; i < chars.length; i++) {
 			char cur = word.toCharArray()[i];
 			charLabels[i] = new Label("" + UNKNOWN_REPLACE_CHAR);
@@ -53,6 +54,7 @@ public class Board extends JPanel {
 		}
 		
 		setLayout(new BorderLayout());
+//		Create a panel for the letters to be added
 		JPanel board = new JPanel();
 		board.setLayout(new GridLayout(1, chars.length));
 		board.setBackground(Color.white);
@@ -62,7 +64,7 @@ public class Board extends JPanel {
 		
 		add(board, BorderLayout.SOUTH);
 		
-		
+//		And a separate panel for the keyboard to be added to
 		JPanel kboard = new JPanel();
 		kboard.setBackground(Color.white);
 		kboard.add(keyboard);
@@ -87,9 +89,8 @@ public class Board extends JPanel {
 	 * Complete the word
 	 */
 	public void complete() {
-		for(int i = 0; i < chars.length; i++) {
+		for(int i = 0; i < chars.length; i++)
 			charLabels[i].setText("" + chars[i]);
-		}
 	}
 	
 	/**
@@ -98,7 +99,9 @@ public class Board extends JPanel {
 	 * @return Does it contain c
 	 */
 	public boolean checkIfContains(char c) {
+//		If the character is inside the word
 		if(ArrayUtils.contains(chars, c)) {
+//			Make the letter visible
 			for(int i = 0; i < chars.length; i++) {
 				char cur = chars[i];
 				
@@ -109,7 +112,7 @@ public class Board extends JPanel {
 			}			
 			
 			boolean won = false;
-			
+//			Check if the player has won
 			for(JLabel label : charLabels) {
 				if(label.getText().contains("" + UNKNOWN_REPLACE_CHAR)) {
 					won = false;
@@ -119,6 +122,7 @@ public class Board extends JPanel {
 				won = true;
 			}
 			
+//			If they have, call hanging.won()
 			if(won)
 				hanging.won();
 				

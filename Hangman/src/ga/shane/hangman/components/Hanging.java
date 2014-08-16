@@ -5,7 +5,13 @@ import ga.shane.hangman.Board;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 
-/** @author http://www.shane.ga */
+/**
+ * The picture of hanging man<br>
+ * Also contains stage handling and such
+ * 
+ * @see {@link JLabel}
+ * @author http://www.shane.ga
+ */
 public class Hanging extends JLabel {
 	/** The stage in which the hanging currently is (7 is dead) */
 	public int stage = -1;

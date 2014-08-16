@@ -5,7 +5,11 @@ import java.awt.GridLayout;
 
 import javax.swing.JFrame;
 
-/** @author http://www.shane.ga */
+/**
+ * The {@link JFrame} for this game
+ * 
+ * @author http://www.shane.ga
+ */
 public class HangmanWindow extends JFrame {
 	private final Board game;
 	
@@ -32,6 +36,7 @@ public class HangmanWindow extends JFrame {
 		getContentPane().setBackground(Color.white);
 		game.setBackground(Color.white);
 		
+//		Add the various game components
 		add(game);
 		add(game.hanging);
 	}

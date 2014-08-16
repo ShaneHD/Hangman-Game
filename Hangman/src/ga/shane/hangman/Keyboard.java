@@ -23,22 +23,27 @@ public class Keyboard extends JPanel implements ActionListener {
 		setBackground(Color.white);
 		char[] alphabet = StringUtils.ALPHABET.toCharArray();
 		
-		GridLayout grid;
-		setLayout(grid = new GridLayout(2, 13));
-		//grid.setVgap(-310);
+		setLayout(new GridLayout(2, 13));
 		
+//		For each of the letters in the alphabet
 		for(char letter : alphabet)
+//			Add a new Letter with its value
 			add(new Letter(this, letter));
 	}
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
+//		Get the typed letter
 		char typed = e.getActionCommand().charAt(0);
 		
+//		If the letter isn't in the word, continue preppin' the hangin'
 		if(!game.checkIfContains(typed))
 			game.hanging.nextStage();
 		
+//		Remove the letter from the keyboard
 		remove((Letter) e.getSource());
+		
+//		Refresh the keyboard so that it doesn't glitch out
 		revalidate();
 		repaint();
 	}

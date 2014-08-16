@@ -20,8 +20,8 @@ public class HangmanWindow extends JFrame {
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setVisible(true);
 		pack();
-		setLocationRelativeTo(null);
 		setSize(getWidth() * 4, getHeight() * 4);
+		setLocationRelativeTo(null);
 	}
 	
 	private void setup() {

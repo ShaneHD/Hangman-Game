@@ -1,5 +1,7 @@
 package ga.shane.hangman.components;
 
+import ga.shane.hangman.Board;
+
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 
@@ -9,8 +11,10 @@ public class Hanging extends JLabel {
 	public int stage = -1;
 	/** Is the poor man dead? */
 	public boolean dead;
+	private final Board game;
 	
-	public Hanging() {
+	public Hanging(Board board) {
+		game = board;
 		nextStage();
 		
 		setHorizontalAlignment(CENTER);
@@ -26,12 +30,36 @@ public class Hanging extends JLabel {
 			return;
 		
 //		If the next stage is death, set dead
-		if(stage == 6)
+		if(stage == 6) {
 			dead = true;
+			finished();
+		}
 		
 //		Increment the stage
 		stage++;
 //		Set the picture
-		setIcon(new ImageIcon("images/stages/" + stage + ".gif"));
+		setIcon("" + stage);
+	}
+	
+	/**
+	 * The game is over (called whenever the player wins/loses)
+	 */
+	private void finished() {
+		game.keyboard.removeAll();
+		game.keyboard.revalidate();
+		game.keyboard.repaint();
+	}
+	
+	private void setIcon(String s) {
+		setIcon(new ImageIcon("images/stages/" + s + ".gif"));
+	}
+	
+	/**
+	 * Called when the player has won the game
+	 * @see {@link Board#checkIfContains(char)}
+	 */
+	public void won() {
+		setIcon("fin");
+		finished();
 	}
 }

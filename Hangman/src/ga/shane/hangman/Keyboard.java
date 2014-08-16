@@ -37,5 +37,9 @@ public class Keyboard extends JPanel implements ActionListener {
 		
 		if(!game.checkIfContains(typed))
 			game.hanging.nextStage();
+		
+		remove((Letter) e.getSource());
+		revalidate();
+		repaint();
 	}
 }

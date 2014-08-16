@@ -27,12 +27,13 @@ public class Board extends JPanel {
 	/** The word */
 	public final String word;
 	/** The {@link Hanging} instance */
-	public final Hanging hanging = new Hanging();
+	public final Hanging hanging;
 	/** The key pad ({@link Keyboard}) */
 	public final Keyboard keyboard;
 	
 	public Board(String word) {
 		keyboard = new Keyboard(this);
+		hanging = new Hanging(this);
 //		Make the word UPPER CASE
 		word = word.toUpperCase();
 		this.word = word;
@@ -97,6 +98,21 @@ public class Board extends JPanel {
 				
 				charLabels[i].setText("" + c);
 			}			
+			
+			boolean won = false;
+			
+			for(JLabel label : charLabels) {
+				if(label.getText().contains("" + UNKNOWN_REPLACE_CHAR)) {
+					won = false;
+					break;
+				}
+				
+				won = true;
+			}
+			
+			if(won)
+				hanging.won();
+				
 			
 			return true;
 		}

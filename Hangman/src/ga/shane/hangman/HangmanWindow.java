@@ -2,8 +2,6 @@ package ga.shane.hangman;
 
 import java.awt.Color;
 import java.awt.GridLayout;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
 
 import javax.swing.JFrame;
 
@@ -11,34 +9,9 @@ import javax.swing.JFrame;
 public class HangmanWindow extends JFrame {
 	private final Board game;
 	
-	public HangmanWindow(final Board game) {
+	public HangmanWindow(Board game) {
 		this.game = game;
 		setLayout(new GridLayout(2, 1));
-		
-		addMouseListener(new MouseListener() {
-
-			@Override
-			public void mouseClicked(MouseEvent arg0) {
-				game.hanging.nextStage();
-			}
-
-			@Override
-			public void mouseEntered(MouseEvent arg0) {
-			}
-
-			@Override
-			public void mouseExited(MouseEvent arg0) {
-			}
-
-			@Override
-			public void mousePressed(MouseEvent arg0) {
-			}
-
-			@Override
-			public void mouseReleased(MouseEvent arg0) {
-			}
-			
-		});
 		
 		setup();
 		

@@ -18,13 +18,13 @@ import javax.swing.JPanel;
 public class Keyboard extends JPanel implements ActionListener {
 	public Keyboard() {
 		setBackground(Color.white);
-		char[] alphabetChars = StringUtils.ALPHABET.toCharArray();
+		char[] alphabet = StringUtils.ALPHABET.toCharArray();
 		
 		GridLayout grid;
 		setLayout(grid = new GridLayout(2, 13));
 		//grid.setVgap(-310);
 		
-		for(char letter : alphabetChars)
+		for(char letter : alphabet)
 			add(new Letter(this, letter));
 	}
 

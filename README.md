@@ -1,4 +1,5 @@
 Hangman-Game
 ============
 
-Hangman
+**Dependencies**:
+[Global Utilities](https://github.com/ShaneHD/Global-Utilities)

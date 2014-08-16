@@ -20,13 +20,18 @@ public class Hanging extends JLabel {
 	 * Move on to the next stage of the hanging
 	 */
 	public void nextStage() {		
+//		If he's dead, there's no more stages to go to
+//		So gtfo
 		if(dead)
 			return;
 		
+//		If the next stage is death, set dead
 		if(stage == 6)
 			dead = true;
 		
+//		Increment the stage
 		stage++;
+//		Set the picture
 		setIcon(new ImageIcon("images/stages/" + stage + ".gif"));
 	}
 }

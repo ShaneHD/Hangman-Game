@@ -10,6 +10,8 @@ public class Hanging extends JLabel {
 	
 	public Hanging() {
 		nextStage();
+		
+		setHorizontalAlignment(CENTER);
 	}
 	
 	/**

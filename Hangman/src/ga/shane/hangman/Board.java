@@ -1,5 +1,10 @@
 package ga.shane.hangman;
 
+import java.awt.GridLayout;
+
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+
 import ga.shane.hangman.components.Hanging;
 import ga.shane.hangman.components.Label;
 import ga.shane.utilities.ArrayUtils;
@@ -11,7 +16,7 @@ import ga.shane.utilities.ArrayUtils;
  * 
  * @author http://www.shane.ga
  */
-public class Board {
+public class Board extends JPanel {
 	//TODO create a separate array for _'s and make the normal char array invisible instead of changing character
 	private final Label[] charLabels;
 	private final Character[] chars;
@@ -34,12 +39,17 @@ public class Board {
 		
 		charLabels = new Label[word.toCharArray().length];
 		chars = new Character[charLabels.length];
-		
+				
 		for(int i = 0; i < chars.length; i++) {
 			char cur = word.toCharArray()[i];
 			charLabels[i] = new Label("" + UNKNOWN_REPLACE_CHAR);
 			chars[i] = cur;
 		}
+		
+		setLayout(new GridLayout(1, chars.length));
+		
+		for(JLabel label : charLabels)
+			add(label);
 	}
 	
 	/**
@@ -52,7 +62,7 @@ public class Board {
 	/**
 	 * Get the size of the word
 	 */
-	public int size() {
+	public int wordSize() {
 		return chars.length;
 	}
 	

@@ -1,9 +1,6 @@
 package ga.shane.hangman;
 
-import java.awt.GridLayout;
-
 import javax.swing.JFrame;
-import javax.swing.JLabel;
 
 /** @author http://www.shane.ga */
 public class HangmanWindow extends JFrame {
@@ -11,7 +8,6 @@ public class HangmanWindow extends JFrame {
 	
 	public HangmanWindow(Board game) {
 		this.game = game;
-		setLayout(new GridLayout(1, game.size()));
 		
 		setup();
 		
@@ -21,13 +17,12 @@ public class HangmanWindow extends JFrame {
 		setVisible(true);
 		pack();
 		setSize(getWidth() * 4, getHeight() * 4);
-		setLocationRelativeTo(null);
+		setLocationRelativeTo(null);		
 	}
 	
 	private void setup() {
 		setTitle(game.size() + " letters");
 		
-		for(JLabel label : game.getLabels())
-			add(label);
+		add(game);
 	}
 }

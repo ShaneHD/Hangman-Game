@@ -26,6 +26,14 @@ public class Board {
 		}
 	}
 	
+	public JLabel[] getLabels() {
+		return charLabels;
+	}
+	
+	public int size() {
+		return chars.length;
+	}
+	
 	/**
 	 * Check if the word contains a character<br>
 	 * If it does, make all occurrences of that character visible

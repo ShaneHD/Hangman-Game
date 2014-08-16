@@ -84,6 +84,15 @@ public class Board extends JPanel {
 	}
 	
 	/**
+	 * Complete the word
+	 */
+	public void complete() {
+		for(int i = 0; i < chars.length; i++) {
+			charLabels[i].setText("" + chars[i]);
+		}
+	}
+	
+	/**
 	 * Check if the word contains a character<br>
 	 * If it does, make all occurrences of that character visible
 	 * @return Does it contain c

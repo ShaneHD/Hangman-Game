@@ -33,6 +33,7 @@ public class Hanging extends JLabel {
 		if(stage == 6) {
 			dead = true;
 			finished();
+			game.complete();
 		}
 		
 //		Increment the stage

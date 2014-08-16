@@ -11,6 +11,7 @@ import java.util.Random;
  * 
  * @author http://www.shane.ga
  */
+//TODO random word array
 public class RandomWordPicker {
 	public RandomWordPicker(File file) {
 //		Get the words in a list

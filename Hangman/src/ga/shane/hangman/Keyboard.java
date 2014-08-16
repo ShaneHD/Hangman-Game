@@ -1,6 +1,7 @@
 package ga.shane.hangman;
 
 import ga.shane.hangman.components.Letter;
+import ga.shane.utilities.StringUtils;
 
 import java.awt.Color;
 import java.awt.GridLayout;
@@ -17,8 +18,7 @@ import javax.swing.JPanel;
 public class Keyboard extends JPanel implements ActionListener {
 	public Keyboard() {
 		setBackground(Color.white);
-		String alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-		char[] alphabetChars = alphabet.toCharArray();
+		char[] alphabetChars = StringUtils.ALPHABET.toCharArray();
 		
 		GridLayout grid;
 		setLayout(grid = new GridLayout(2, 13));

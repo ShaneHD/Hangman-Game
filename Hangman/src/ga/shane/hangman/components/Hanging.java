@@ -7,6 +7,8 @@ import javax.swing.JLabel;
 public class Hanging extends JLabel {
 	/** The stage in which the hanging currently is (7 is dead) */
 	public int stage = -1;
+	/** Is the poor man dead? */
+	public boolean dead;
 	
 	public Hanging() {
 		nextStage();
@@ -17,7 +19,13 @@ public class Hanging extends JLabel {
 	/**
 	 * Move on to the next stage of the hanging
 	 */
-	public void nextStage() {
+	public void nextStage() {		
+		if(dead)
+			return;
+		
+		if(stage == 6)
+			dead = true;
+		
 		stage++;
 		setIcon(new ImageIcon("images/stages/" + stage + ".gif"));
 	}

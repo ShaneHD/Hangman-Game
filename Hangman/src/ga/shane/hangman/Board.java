@@ -19,6 +19,8 @@ public class Board {
 	public final String word;
 	
 	public Board(String word) {
+//		Make the word UPPER CASE
+		word = word.toUpperCase();
 		this.word = word;
 		
 //		If the word contains a space, exit the program

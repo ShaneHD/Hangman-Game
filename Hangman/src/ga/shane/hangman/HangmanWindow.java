@@ -27,8 +27,7 @@ public class HangmanWindow extends JFrame {
 	private void setup() {
 		setTitle(game.size() + " letters");
 		
-		for(JLabel label : game.getLabels()) {
+		for(JLabel label : game.getLabels())
 			add(label);
-		}
 	}
 }

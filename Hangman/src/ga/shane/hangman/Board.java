@@ -29,9 +29,10 @@ public class Board extends JPanel {
 	/** The {@link Hanging} instance */
 	public final Hanging hanging = new Hanging();
 	/** The key pad ({@link Keyboard}) */
-	public final Keyboard keyboard = new Keyboard();
+	public final Keyboard keyboard;
 	
 	public Board(String word) {
+		keyboard = new Keyboard(this);
 //		Make the word UPPER CASE
 		word = word.toUpperCase();
 		this.word = word;

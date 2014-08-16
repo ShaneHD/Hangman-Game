@@ -16,7 +16,10 @@ import javax.swing.JPanel;
  * @author http://www.shane.ga
  */
 public class Keyboard extends JPanel implements ActionListener {
-	public Keyboard() {
+	private final Board game;
+	
+	public Keyboard(Board board) {
+		game = board;
 		setBackground(Color.white);
 		char[] alphabet = StringUtils.ALPHABET.toCharArray();
 		
@@ -30,5 +33,9 @@ public class Keyboard extends JPanel implements ActionListener {
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
+		char typed = e.getActionCommand().charAt(0);
+		
+		if(!game.checkIfContains(typed))
+			game.hanging.nextStage();
 	}
 }

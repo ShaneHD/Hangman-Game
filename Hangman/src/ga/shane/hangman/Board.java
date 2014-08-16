@@ -11,6 +11,7 @@ import ga.shane.utilities.ArrayUtils;
  * @author http://www.shane.ga
  */
 public class Board {
+	//TODO create a separate array for _'s and make the normal char array invisible instead of changing character
 	private final Label[] charLabels;
 	private final Character[] chars;
 	/** The {@link Character} that un-guessed letters will be shown as */

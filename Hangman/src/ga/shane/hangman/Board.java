@@ -1,5 +1,6 @@
 package ga.shane.hangman;
 
+import ga.shane.hangman.components.Hanging;
 import ga.shane.hangman.components.Label;
 import ga.shane.utilities.ArrayUtils;
 
@@ -18,6 +19,8 @@ public class Board {
 	public final static char UNKNOWN_REPLACE_CHAR = '_';
 	/** The word */
 	public final String word;
+	/** The {@link Hanging} instance */
+	public final Hanging hanging = new Hanging();
 	
 	public Board(String word) {
 //		Make the word UPPER CASE

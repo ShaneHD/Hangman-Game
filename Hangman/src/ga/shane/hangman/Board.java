@@ -14,7 +14,7 @@ public class Board {
 	private final Label[] charLabels;
 	private final Character[] chars;
 	/** The {@link Character} that un-guessed letters will be shown as */
-	public final static char UNKNOWN_REPLACE_CHAR = '*';
+	public final static char UNKNOWN_REPLACE_CHAR = '_';
 	/** The word */
 	public final String word;
 	

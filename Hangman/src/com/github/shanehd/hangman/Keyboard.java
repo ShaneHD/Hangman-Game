@@ -1,7 +1,4 @@
-package ga.shane.hangman;
-
-import ga.shane.hangman.components.Letter;
-import ga.shane.utilities.StringUtils;
+package com.github.shanehd.hangman;
 
 import java.awt.Color;
 import java.awt.GridLayout;
@@ -9,6 +6,9 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import javax.swing.JPanel;
+
+import com.github.shanehd.hangman.components.Letter;
+import com.github.shanehd.utilities.StringUtils;
 
 /**
  * A graphical presentation of all letters in the alphabet

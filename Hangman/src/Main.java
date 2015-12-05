@@ -1,6 +1,7 @@
-import ga.shane.hangman.RandomWordPicker;
-import ga.shane.utilities.GuiUtils;
 import java.io.File;
+
+import com.github.shanehd.hangman.RandomWordPicker;
+import com.github.shanehd.utilities.GuiUtils;
 
 /** @author https://www.github.com/ShaneHD */
 public class Main {

@@ -1,4 +1,4 @@
-package ga.shane.hangman;
+package com.github.shanehd.hangman;
 
 import java.awt.Color;
 import java.awt.GridLayout;

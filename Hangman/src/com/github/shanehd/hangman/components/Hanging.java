@@ -1,9 +1,9 @@
-package ga.shane.hangman.components;
-
-import ga.shane.hangman.Board;
+package com.github.shanehd.hangman.components;
 
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
+
+import com.github.shanehd.hangman.Board;
 
 /**
  * The picture of hanging man<br>

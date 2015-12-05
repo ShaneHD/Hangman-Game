@@ -1,10 +1,10 @@
-package ga.shane.hangman;
+package com.github.shanehd.hangman;
 
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Random;
 
-import ga.shane.utilities.FileUtils;
+import com.github.shanehd.utilities.FileUtils;
 
 /**
  * Pick a random word from a file and launch a hangman game with that word

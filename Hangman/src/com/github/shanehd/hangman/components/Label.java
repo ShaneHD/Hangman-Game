@@ -1,4 +1,4 @@
-package ga.shane.hangman.components;
+package com.github.shanehd.hangman.components;
 
 import javax.swing.JLabel;
 

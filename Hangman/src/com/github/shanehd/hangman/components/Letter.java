@@ -1,11 +1,11 @@
-package ga.shane.hangman.components;
-
-import ga.shane.hangman.Keyboard;
-import ga.shane.utilities.gui.BJButton;
+package com.github.shanehd.hangman.components;
 
 import java.awt.Color;
 
 import javax.swing.BorderFactory;
+
+import com.github.shanehd.hangman.Keyboard;
+import com.github.shanehd.utilities.gui.BJButton;
 
 /**
  * A {@link BJButton} with a letter from the alphabet in it

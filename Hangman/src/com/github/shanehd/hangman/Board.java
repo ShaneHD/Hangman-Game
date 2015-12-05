@@ -1,4 +1,4 @@
-package ga.shane.hangman;
+package com.github.shanehd.hangman;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
@@ -7,9 +7,9 @@ import java.awt.GridLayout;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
-import ga.shane.hangman.components.Hanging;
-import ga.shane.hangman.components.Label;
-import ga.shane.utilities.ArrayUtils;
+import com.github.shanehd.hangman.components.Hanging;
+import com.github.shanehd.hangman.components.Label;
+import com.github.shanehd.utilities.ArrayUtils;
 
 /**
  * The board for the game.<br>
